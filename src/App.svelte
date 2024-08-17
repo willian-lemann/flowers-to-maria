@@ -12,10 +12,10 @@
 </script>
 
 <div>
-  <!-- <audio class="audio" preload="auto" autoplay>
+  <audio class="audio" preload="auto" autoplay>
     <source src={track} type="audio/mp3" />
     Your browser does not support the audio tag.
-  </audio> -->
+  </audio>
 
   <div
     data-open={open}
