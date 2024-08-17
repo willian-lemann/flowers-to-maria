@@ -1,16 +1,58 @@
 <script>
   import track from "../src/track.mp3";
+  import JSConfetti from "js-confetti";
+
+  let open = false;
+  const jsConfetti = new JSConfetti();
+
+  const handleOpenModal = () => {
+    open = !open;
+    jsConfetti.addConfetti();
+  };
 </script>
 
 <div>
-  <audio class="audio" preload="auto" autoplay>
+  <!-- <audio class="audio" preload="auto" autoplay>
     <source src={track} type="audio/mp3" />
     Your browser does not support the audio tag.
-  </audio>
+  </audio> -->
 
-  <div class="header-title">
-    <h1>Trouxe flores para você </h1>
-    <div class="emoji">😄</div>
+  <div
+    data-open={open}
+    class="absolute group transition-all invisible opacity-0 data-[open=true]:opacity-100 data-[open=true]:visible inset-0 bg-white/10 flex items-center justify-center z-[9999]"
+  >
+    <div
+      class="dialog -mt-20 transition-all opacity-0 group-data-[open=true]:opacity-100"
+    >
+      <img
+        src="/background.png"
+        alt="background image"
+        class="rounded-3xl h-[400px] w-[400px] object-cover"
+      />
+    </div>
+  </div>
+
+  <div class="absolute z-50 top-10 gap-4 -translate-x-1/2 w-full p-4">
+    <h1 class="header-text text-3xl text-center text-white">
+      Trouxe mais uma flor pra você!
+    </h1>
+  </div>
+
+  <div class="header-title bg-black bottom-0 mb-12 space-y-4">
+    <button
+      on:click={handleOpenModal}
+      class="relative group flex w-[400px] items-center justify-center overflow-hidden px-0.5 py-0.5"
+    >
+      <div
+        class="neon bg-gradient-to-br transition-all absolute z-0 py-4 opacity-95 inset-0 from-[#23f0ff] to-[#23f0ff] text-white p-0 shadow-md shadow-[#23f0ff]/50 rounded-lg hover:from-[#23f0ff] hover:to-[#23f0ff] border-4 border-[#23f0ff] border-opacity-50"
+      ></div>
+
+      <div
+        class="inner-button z-10 px-4 py-4 relative inset-0 bg-black rounded-md w-full h-full"
+      >
+        <span class="text-lg text-white">Abrir foto da flor</span>
+      </div>
+    </button>
   </div>
 
   <div class="night"></div>

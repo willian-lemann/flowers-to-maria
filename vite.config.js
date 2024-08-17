@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+
 import { scss, sveltePreprocess } from "svelte-preprocess";
 import svelte from "rollup-plugin-svelte";
 // https://vitejs.dev/config/

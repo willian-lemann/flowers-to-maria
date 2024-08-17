@@ -23,10 +23,8 @@ body {
 
 .header-title {
 	z-index: 9999;
-	height: 200px;
 	position: absolute;
-	top: 50px;
-	color: #ffffff;
+
 	display: flex;
 	flex-direction: row;
 	;
@@ -39,6 +37,7 @@ body {
 }
 
 .header-title h1 {
+	color: #ffffff;
 	opacity: 0.9;
 	font-size: 2rem;
 	margin: 0;
