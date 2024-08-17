@@ -12,10 +12,10 @@
 </script>
 
 <div>
-  <audio class="audio" preload="auto" autoplay>
+  <!-- <audio class="audio" preload="auto" autoplay>
     <source src={track} type="audio/mp3" />
     Your browser does not support the audio tag.
-  </audio>
+  </audio> -->
 
   <div
     data-open={open}
@@ -27,7 +27,7 @@
       <img
         src="/background.png"
         alt="background image"
-        class="rounded-3xl h-[400px] w-[400px] object-cover"
+        class="rounded-3xl h-[400px] w-[350px] md:w-[400px] object-cover"
       />
     </div>
   </div>
@@ -41,7 +41,7 @@
   <div class="header-title bg-black bottom-0 mb-12 space-y-4">
     <button
       on:click={handleOpenModal}
-      class="relative group flex w-[400px] items-center justify-center overflow-hidden px-0.5 py-0.5"
+      class="relative group flex md:w-[400px] w-[300px] items-center justify-center overflow-hidden px-0.5 py-0.5"
     >
       <div
         class="neon bg-gradient-to-br transition-all absolute z-0 py-4 opacity-95 inset-0 from-[#23f0ff] to-[#23f0ff] text-white p-0 shadow-md shadow-[#23f0ff]/50 rounded-lg hover:from-[#23f0ff] hover:to-[#23f0ff] border-4 border-[#23f0ff] border-opacity-50"
